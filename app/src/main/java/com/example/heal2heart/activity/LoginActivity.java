@@ -13,9 +13,11 @@ import android.view.View;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.heal2heart.R;
 import com.example.heal2heart.models.request.Login;
 import com.example.heal2heart.models.response.login.LoginResponse;
@@ -33,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     Button ln_btn;
     EditText email, password;
     AbsoluteLayout absolute;
+    ImageView back_arrow;
 
 
     @Override
@@ -45,6 +48,17 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password_edtxt);
         absolute = (AbsoluteLayout) findViewById(R.id.absolute);
         absolute.setVisibility(View.GONE);
+        ImageView img = (ImageView) findViewById(R.id.spin_kit);
+        Glide.with(this).load(R.drawable.loader).into(img);
+
+        back_arrow = (ImageView) findViewById(R.id.back_arrow);
+        back_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         ln_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +71,6 @@ public class LoginActivity extends AppCompatActivity {
                             String deviceId = Settings.Secure.getString(getContentResolver(),
                                     Settings.Secure.ANDROID_ID);
 
-                            Log.w("deviceId", deviceId);
 
                             Login user = new Login(email.getText().toString(),password.getText().toString(), deviceId, 0, 1, 0,"");
 
@@ -103,8 +116,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void startHomeActivity(){
         Intent intent=new Intent(LoginActivity.this,DashboardActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-        LoginActivity.this.finish();
     }
 
     private boolean validate() {

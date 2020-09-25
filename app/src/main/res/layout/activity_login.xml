@@ -9,8 +9,13 @@ android:background="@drawable/my_gradient_drawable"
 android:orientation="vertical">
 
 
-
-
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_arrow"
+        android:id="@+id/back_arrow"
+        android:layout_margin="30dp"
+        />
     <LinearLayout
     android:id="@+id/lin_all"
     android:layout_width="fill_parent"
@@ -21,8 +26,8 @@ android:orientation="vertical">
 
 
     <ImageView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:src="@drawable/ic_dashboard_logo"
         android:layout_gravity="center"
         />
@@ -45,7 +50,7 @@ android:orientation="vertical">
         android:text="Sign In With Email"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:textSize="16sp"
+        android:textSize="12sp"
         android:fontFamily="@font/montserrat_regular"
         android:textColor="@color/white"/>
     <LinearLayout
@@ -59,11 +64,11 @@ android:orientation="vertical">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_border_and_background_login"
-        android:padding="13dp"
+        android:padding="10dp"
         android:hint="Email"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/montserrat_regular"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textColor="#3a3a3a"
         android:id="@+id/email_edtxt"
         />
@@ -72,11 +77,11 @@ android:orientation="vertical">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_border_and_background_login"
-        android:padding="13dp"
+        android:padding="10dp"
         android:hint="Password"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/montserrat_regular"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textColor="#3a3a3a"
         android:id="@+id/password_edtxt"
         android:inputType="textPassword"
@@ -84,15 +89,13 @@ android:orientation="vertical">
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:id="@+id/email_login_btn"
-        android:layout_weight="10"
-        android:padding="10dp"
         android:layout_marginTop="15dp"
         android:text="Sign In"
         android:background="@drawable/button_background"
-        android:fontFamily="@font/montserrat_bold"
-        android:textSize="16sp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="14sp"
         android:textColor="#3a3a3a"
         />
 
@@ -105,7 +108,7 @@ android:orientation="vertical">
         android:layout_marginTop="15dp"
         android:textColor="@color/white"
         android:fontFamily="@font/montserrat_regular"
-        android:textSize="16sp"/>
+        android:textSize="12sp"/>
 </LinearLayout>
 
     <AbsoluteLayout
@@ -119,15 +122,12 @@ android:orientation="vertical">
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <com.github.ybq.android.spinkit.SpinKitView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <ImageView
                 android:id="@+id/spin_kit"
-                style="@style/SpinKitView.Wave"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                app:SpinKit_Color="@color/blue" />
+                android:layout_centerVertical="true"/>
 
         </RelativeLayout>
     </AbsoluteLayout>
@@ -138,12 +138,12 @@ android:orientation="vertical">
     android:text="@string/signup_text"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="20dp"
-    android:textSize="16sp"
+    android:textSize="12sp"
     android:layout_alignParentBottom="true"
     android:layout_marginBottom="50dp"
     android:layout_centerHorizontal="true"
     android:textColor="@color/white"
     android:id="@+id/signup_link"
-    android:fontFamily="@font/montserrat_semibold"/>
+    android:fontFamily="@font/montserrat_regular"/>
 
 </RelativeLayout>

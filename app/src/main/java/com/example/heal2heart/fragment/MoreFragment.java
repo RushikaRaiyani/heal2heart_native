@@ -83,6 +83,7 @@ public class MoreFragment extends Fragment {
                 new ShareManager(getContext()).Logout();
                 Intent i = new Intent(getContext(), MainActivity.class);
                 startActivity(i);
+                getActivity().finish();
             }
         });
 

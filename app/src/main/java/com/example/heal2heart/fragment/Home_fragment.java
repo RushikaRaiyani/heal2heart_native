@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.heal2heart.R;
 import com.example.heal2heart.adapter.BookSessionAdapter;
 import com.example.heal2heart.adapter.SlidingImage_Adapter;
@@ -51,7 +52,7 @@ public class Home_fragment extends Fragment {
 
         ImageView img = (ImageView) view.findViewById(R.id.loading);
 
-        Picasso.with(getContext()).load(R.drawable.loader).fit().into(img);
+        Glide.with(this).load(R.drawable.loader).into(img);
         mPager = (ViewPager) view.findViewById(R.id.viewpager);
 
         ImagesArray.add("https://source.unsplash.com/1024x768/?nature");
