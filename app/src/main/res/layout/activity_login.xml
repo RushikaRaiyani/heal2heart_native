@@ -6,6 +6,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".activity.LoginActivity"
 android:background="@drawable/my_gradient_drawable"
+ android:id="@+id/parent"
 android:orientation="vertical">
 
 
@@ -71,6 +72,7 @@ android:orientation="vertical">
         android:textSize="12sp"
         android:textColor="#3a3a3a"
         android:id="@+id/email_edtxt"
+        android:singleLine="true"
         />
 
     <EditText
@@ -85,6 +87,7 @@ android:orientation="vertical">
         android:textColor="#3a3a3a"
         android:id="@+id/password_edtxt"
         android:inputType="textPassword"
+        android:singleLine="true"
         />
 
     <Button

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/parent"
     tools:context=".fragment.Home_fragment">
 
     <RelativeLayout
@@ -72,7 +73,8 @@
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:drawableLeft="@drawable/search_icon"
-            android:textSize="12sp"
+            android:textSize="14sp"
+            android:singleLine="true"
 
             />
     </LinearLayout>
