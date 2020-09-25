@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Heal2Heart</string>
+    <string name="email_login_btn">Continue With Email</string>
+    <string name="fb_login_btn">Continue With Facebook</string>
+    <string name="google_login_btn">Continue With Gmail</string>
+    <string name="signup_text">Create a New Account? <u>Sign Up</u></string>
+    <string name="forgot_pwd_text"><u>Forgot Password?</u></string>
+
+</resources>

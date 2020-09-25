@@ -1,0 +1,50 @@
+package com.example.heal2heart.adapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.heal2heart.R;
+
+import java.util.List;
+
+public class StartSessionAdapter extends RecyclerView.Adapter<StartSessionAdapter.MyViewholder> {
+    private Context context;
+    LayoutInflater layoutInflater;
+    int p;
+
+    public StartSessionAdapter(Context context) {
+        this.context=context;
+        layoutInflater=LayoutInflater.from(context);
+
+    }
+
+    public class MyViewholder extends RecyclerView.ViewHolder{
+
+        public MyViewholder(View itemView) {
+            super(itemView);
+        }
+    }
+
+    @NonNull
+    @Override
+    public StartSessionAdapter.MyViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v= layoutInflater.inflate(R.layout.start_session,parent,false);
+
+        return new MyViewholder(v);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull final MyViewholder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 10;
+    }
+}
